@@ -7,6 +7,7 @@
   <url type="homepage">https://www.mono-project.com/</url>
   <url type="bugtracker">https://github.com/flathub/org.freedesktop.Sdk.Extension.mono6</url>
   <releases>
-    <release version="6.12.0.122" date="2021-02-23" />
+    <release version="6.12.0.182" date="2022-06-14"/>
+    <release version="6.12.0.122" date="2021-02-23"/>
   </releases>
 </component>
