@@ -1,3 +1,4 @@
 {
-    "skip-icons-check": true
+    "skip-icons-check": true,
+    "end-of-life": "21.08 Freedesktop runtime has reached EOL, therefore this extension is also EOL"
 }
