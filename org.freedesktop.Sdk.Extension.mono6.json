@@ -1,10 +1,10 @@
 {
     "id": "org.freedesktop.Sdk.Extension.mono6",
-    "branch": "24.08",
+    "branch": "25.08",
     "runtime": "org.freedesktop.Sdk",
     "build-extension": true,
     "sdk": "org.freedesktop.Sdk",
-    "runtime-version": "24.08",
+    "runtime-version": "25.08",
     "separate-locales": false,
     "modules": [
         {
@@ -15,15 +15,26 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.mono-project.com/sources/mono/mono-6.12.0.199.tar.xz",
-                    "sha256": "c0850d545353a6ba2238d45f0914490c6a14a0017f151d3905b558f033478ef5",
+                    "url": "https://dl.winehq.org/mono/sources/mono/mono-6.14.1.tar.xz",
+                    "sha256": "3024c97c0bc8cbcd611c401d5f994528704108ceb31f31b28dea4783004d0820",
                     "x-checker-data": {
-                        "type": "html",
-                        "url": "https://download.mono-project.com/sources/mono/",
-                        "version-pattern": "mono-(6(?:\\.[\\d]+){3})\\.tar\\.xz",
-                        "url-template": "https://download.mono-project.com/sources/mono/mono-${version}.tar.xz",
-                        "is-main-source": true
+                        "is-main-source": true,
+                        "type": "anitya",
+                        "project-id": 6360,
+                        "url-template": "https://dl.winehq.org/mono/sources/mono/mono-$version.tar.xz",
+                        "versions": {
+                            "<": "7"
+                        },
+                        "stable-only": true
                     }
+                },
+                {
+                    "type": "patch",
+                    "paths": [
+                        "patches/0001-arm64-Fix-a-pointer-to-int-cast-size-mismatch.patch",
+                        "patches/0002-arm64-Fix-an-invalid-stack-read.patch",
+                        "patches/0003-arm64-Remove-an-unused-function.patch"
+                    ]
                 }
             ]
         },
